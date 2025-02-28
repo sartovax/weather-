@@ -1,0 +1,265 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.site-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.site-header {
+    background-color: #1E202B;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.branding {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+
+
+
+
+.main-navigation {
+    padding-left: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-navigation ul li a {
+    border-color: rgb(0, 154, 216);
+color: rgb(0, 154, 216);
+padding: 5px 25px;
+border: 2px solid transparent;
+border-radius: 30px;
+transition: 0.3s;
+font-weight: 400;
+background: transparent;
+text-decoration: none;
+box-sizing: border-box;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu-item {
+    margin-left: 20px;
+}
+
+.menu-item a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+    background-image: url(./banner\ \(1\).png);
+
+}
+
+
+.find-location {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.find-location input[type="text"] {
+    width: 100%;
+padding: 20px 50px 20px 20px;
+background: rgb(30, 32, 43);
+color: white;
+outline: none;
+border: none;
+border-radius: 30px;
+font-family: inherit;
+font-size: 100%;
+margin: 0px;
+vertical-align: baseline;
+line-height: normal;
+box-sizing: border-box;
+}
+
+.find-location input[type="button"] {
+   position: absolute;
+top: 5px;
+right: 5px;
+bottom: 5px;
+padding: 0px 40px;
+appearance: button;
+cursor: pointer;
+border: none;
+background: rgb(0, 154, 216);
+border-radius: 30px;
+color: white;
+outline: none;
+font-family: inherit;
+font-size: 100%;
+margin: 0px;
+vertical-align: baseline;
+line-height: normal;
+box-sizing: border-box;
+}
+
+.forecast-table {
+    height: 60vh;
+    padding: 20px 0;
+    background-color: #1E202B;
+}
+
+.forecast-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.forecast {
+    color: #fff;
+    background-color: #323544;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+.forecast.today {
+    flex: 1 1 100%;
+}
+
+.forecast-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.forecast-header .day {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.forecast-header .date {
+    font-size: 14px;
+    color: #666;
+}
+
+.forecast-content {
+    text-align: center;
+}
+
+.location {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.degree {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.degree .num {
+    font-size: 36px;
+}
+
+.degree sup {
+    font-size: 18px;
+}
+
+.forecast-icon img {
+    margin-bottom: 10px;
+}
+
+.custom {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.site-footer {
+    background-color: #323544;
+    position: relative;
+    background-color: #323544;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+}
+.site-footer input[type="text"] {
+        padding: 20px 100px 20px 20px;
+background: rgb(30, 32, 43);
+width: 100%;
+color: white;
+outline: none;
+border: none;
+border-radius: 30px;
+font-family: inherit;
+font-size: 100%;
+margin: 0px;
+vertical-align: baseline;
+line-height: normal;
+box-sizing: border-box;
+    
+}
+.mail{
+    position: relative;
+}
+.site-footer input[type="submit"] {
+    position: absolute;
+right: 5px;
+top: 5px;
+bottom: 5px;
+border: none;
+background: rgb(0, 154, 216);
+padding: 10px 20px;
+border-radius: 30px;
+color: white;
+appearance: button;
+cursor: pointer;
+outline: none;
+font-family: inherit;
+font-size: 100%;
+margin: 0px;
+vertical-align: baseline;
+line-height: normal;
+box-sizing: border-box;
+}
+.social-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.colophon {
+    margin: 0;
+    font-size: 14px;
+}
