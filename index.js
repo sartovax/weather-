@@ -1,4 +1,4 @@
-const apiKey = '5a6a13a79a454a63b2814322252502'; // Replace with your actual API key
+const apiKey = '4740d90631714cdd94584740261501'; // Replace with your actual API key
 const searchApiUrl = `https://api.weatherapi.com/v1/search.json?key=5a6a13a79a454a63b2814322252502&q=`;
 const forecastApiUrl = `https://api.weatherapi.com/v1/forecast.json?key=5a6a13a79a454a63b2814322252502&days=3&q=`;
 
