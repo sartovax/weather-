@@ -2,69 +2,125 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Forecast</title>
+    <meta name="description" content="SkyScope – Real-time weather forecasts for any city in the world. Beautiful, fast, and accurate.">
+    <title>SkyScope – Weather Forecast</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="site-content">
-        <div class="site-header">
-            <div class="container">
+
+        <!-- HEADER -->
+        <header class="site-header">
+            <div class="container header-inner">
                 <a class="branding" href="/">
-                    <div class="logo-type">
-                     <img src="./logo.png" alt="logo">    
+                    <div class="logo-wrap">
+                        <i class="fa-solid fa-cloud-sun logo-icon"></i>
+                        <span class="brand-name">SkyScope</span>
                     </div>
                 </a>
-                <div class="main-navigation">
-                    <ul class="menu">
+                <nav class="main-navigation" aria-label="Main navigation">
+                    <ul class="menu" id="main-menu">
                         <li class="menu-item current-menu-item"><a href="/">Home</a></li>
                         <li class="menu-item"><a href="#">News</a></li>
                         <li class="menu-item"><a href="#">Live</a></li>
                         <li class="menu-item"><a href="#">Photos</a></li>
-                        <li class="menu-item"><a href="/contact">Contact</a></li>
+                        <li class="menu-item"><a href="#contact">Contact</a></li>
                     </ul>
-                </div>
-                
+                </nav>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
-        </div>
-        <div class="hero">
-            <div class="container">
-                <form class="find-location">
-                    <input type="text" placeholder="Find your location..." id="cityInput">
-                    <input type="button" value="Find" id="searchButton">
+        </header>
+
+        <!-- HERO -->
+        <section class="hero" id="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <p class="hero-eyebrow">Real-time Weather Intelligence</p>
+                <h1 class="hero-title">Know Before<br>You Go</h1>
+                <p class="hero-sub">Search any city in the world and get instant 3-day forecasts.</p>
+                <form class="find-location" id="searchForm" role="search">
+                    <div class="search-wrapper">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input
+                            type="text"
+                            placeholder="Search city or location…"
+                            id="cityInput"
+                            autocomplete="off"
+                            aria-label="City search"
+                        >
+                        <button type="submit" id="searchButton">
+                            <i class="fa-solid fa-arrow-right"></i>
+                            <span>Find</span>
+                        </button>
+                    </div>
                 </form>
-            </div>
-        </div>
-        <div class="forecast-table">
-            <div class="container">
-                <div class="forecast-container" id="forecast">
-                    <!-- Weather data will be dynamically inserted here -->
+                <div class="quick-links">
+                    <span>Popular:</span>
+                    <button class="quick-city" data-city="Cairo">Cairo</button>
+                    <button class="quick-city" data-city="London">London</button>
+                    <button class="quick-city" data-city="New York">New York</button>
+                    <button class="quick-city" data-city="Tokyo">Tokyo</button>
                 </div>
             </div>
-        </div>
-        <footer class="site-footer">
+            <div class="hero-scroll-hint">
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- FORECAST -->
+        <section class="forecast-section" id="forecastSection">
             <div class="container">
-                <div class="row">
-                    <div class="mail col-md-8">
-                        <form action="#" class="subscribe-form">
-                            <input type="text" placeholder="Enter your email to subscribe...">
-                            <input type="submit" value="Subscribe">
-                        </form>
+                <div id="forecast-placeholder" class="forecast-placeholder">
+                    <div class="placeholder-icon">
+                        <i class="fa-solid fa-cloud-sun-rain"></i>
                     </div>
-                    <div class="col-md-3 col-md-offset-1">
-                        <div class="social-links">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                    <p>Search a city above to see the weather forecast</p>
+                </div>
+                <div class="forecast-container" id="forecast"></div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="site-footer" id="contact">
+            <div class="container footer-inner">
+                <div class="footer-brand">
+                    <i class="fa-solid fa-cloud-sun"></i>
+                    <span>SkyScope</span>
+                </div>
+                <div class="footer-subscribe">
+                    <p>Get daily weather updates in your inbox</p>
+                    <form action="#" class="subscribe-form" id="subscribeForm">
+                        <div class="subscribe-wrap">
+                            <i class="fa-solid fa-envelope sub-icon"></i>
+                            <input type="email" placeholder="Enter your email…" aria-label="Email address" id="emailInput">
+                            <button type="submit" id="subscribeBtn">Subscribe</button>
                         </div>
-                    </div>
+                    </form>
                 </div>
-                <p class="colophon">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <p class="colophon">© 2025 SkyScope. All rights reserved. Powered by WeatherAPI.</p>
             </div>
         </footer>
-    </div>
+
+    </div><!-- /.site-content -->
+
     <script src="index.js"></script>
 </body>
 </html>
