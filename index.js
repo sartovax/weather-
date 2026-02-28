@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 // ─── Open-Meteo API (no API key required) ───────────────────────────────────
 const GEO_URL = 'https://geocoding-api.open-meteo.com/v1/search';
 const FORECAST_URL = 'https://api.open-meteo.com/v1/forecast';
+=======
+const apiKey = '4740d90631714cdd94584740261501'; // Replace with your actual API key
+const searchApiUrl = `https://api.weatherapi.com/v1/search.json?key=5a6a13a79a454a63b2814322252502&q=`;
+const forecastApiUrl = `https://api.weatherapi.com/v1/forecast.json?key=5a6a13a79a454a63b2814322252502&days=3&q=`;
+>>>>>>> a04c63413faca10ddb1ed785b0b5d06fd93e9a10
 
 // ─── WMO Weather Interpretation Codes → label + emoji icon ──────────────────
 // https://open-meteo.com/en/docs#weathervariables
@@ -201,6 +207,7 @@ function displayWeather(data, cityName, country) {
                 </div>
             </div>
         `;
+<<<<<<< HEAD
 
         forecastEl.appendChild(card);
     }
@@ -225,3 +232,8 @@ function showError(msg) {
         </div>`;
     placeholder.style.display = 'none';
 }
+=======
+        forecastContainer.innerHTML += forecastHtml;
+    });
+}
+>>>>>>> a04c63413faca10ddb1ed785b0b5d06fd93e9a10
